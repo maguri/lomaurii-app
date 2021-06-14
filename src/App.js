@@ -1,24 +1,82 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState, useContext } from 'react';
 
+import { Switch, Route, NavLink } from 'react-router-dom';
+
+import { SocketContext } from './context';
+import { Stamina, Icons, Form } from './components'
+
+const REFRESH_INTERVAL = 1e3;
 function App() {
+  const { socket } = useContext(SocketContext);
+  const [data, setData] = useState({
+    "elements": {
+    "icons":
+    {
+      "Water": {
+        "key":"Water",
+        "level": 1,
+        "up": 1,
+        "down": 0
+      },
+      "Food": {
+        "key":"Food",
+        "level": 1,
+        "up": 1,
+        "down": 0
+      },
+      "Temp": {
+        "key":"Temp",
+        "level": 2,
+        "up": 1,
+        "down": 0
+      },
+      "Blood": {
+        "key":"Blood",
+        "level": 1,
+        "up": 1,
+        "down": 0
+      },
+      "Health": {
+        "key": "Health",
+        "level": 1,
+        "up": 1,
+        "down": 0
+      }
+    },
+    "stamina": {
+      "level": 90
+    }
+    }
+  });
+
+  useEffect(() => {
+    setInterval(() => {
+      socket.emit('refresh');
+    }, REFRESH_INTERVAL);
+    socket.on('refresh', (data) => {
+      console.log(data);
+      setData(data);
+    });
+  }, [socket]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <NavLink to="form" >Form </NavLink>
+        <Stamina
+          data={data.elements['stamina']}
+        />
+        <Icons
+          icons={data.elements['icons']}
+        />
+      </Route>
+      <Route exact path="/form">
+        <NavLink to="/" style={{ marginBottom: 30, color: '#fff000' }}>Icons </NavLink>
+        <Form
+          data={data.elements}
+        />
+      </Route>
+    </Switch>
   );
 }
 

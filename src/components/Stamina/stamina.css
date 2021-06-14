@@ -1,0 +1,8 @@
+.stamina-box {
+  display: flex;
+  align-items: stretch;
+}
+
+#Stamina {
+  margin-top: 50%;
+}

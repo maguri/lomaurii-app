@@ -1,0 +1,11 @@
+#Health {
+  margin-top: 50%;
+}
+
+.box {
+  display: flex;
+}
+
+.box-center {
+  align-items: center;
+}

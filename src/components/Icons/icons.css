@@ -1,0 +1,13 @@
+.right-down > .icon {
+  width: 50px;
+  float: right;
+  margin-right: 1px;
+}
+
+.icon > img {
+  width: 50px;
+}
+
+.icon-border {
+  border-left: 2px solid var(--white);
+}
