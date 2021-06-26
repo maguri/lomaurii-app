@@ -9,5 +9,5 @@
 }
 
 .icon-border {
-  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--white);
 }

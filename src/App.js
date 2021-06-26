@@ -12,6 +12,10 @@ function App() {
     "elements": {
     "icons":
     {
+      "Other": {
+        "key":"Other",
+        "level": 0
+      },
       "Water": {
         "key":"Water",
         "level": 1,

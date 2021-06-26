@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./icons.css";
+import Other from "./Other";
 import Water from "./Water";
 import Food from "./Food";
 import Blood from "./Blood";
@@ -18,6 +19,7 @@ const Icons = ({
       <Temp   icon={icons["Temp"]} />
       <Food   icon={icons["Food"]} />
       <Water  icon={icons["Water"]} />
+      <Other  icon={icons["Other"]} />
     </div>
   );
 };

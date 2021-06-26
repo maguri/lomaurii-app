@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./form.css";
+import FormOther from "./FormOther";
 import FormWater from "./FormWater";
 import FormFood from "./FormFood";
 import FormBlood from "./FormBlood";
@@ -15,6 +16,9 @@ const Form = ({
 }) => {
   return (
     <div className="box-center">
+      <FormOther
+        data={data?.icons["Other"]}
+      />
       <FormWater
         data={data?.icons["Water"]}
       />
