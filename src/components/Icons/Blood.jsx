@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Up0, Up1, Up2, Down0, Down1, Down2 } from "../../static/icons";
 import { Blood1, Blood2, Blood3, Blood4 } from "../../static/icons";
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Up0, Up1, Up2, Down0, Down1, Down2 } from "../../static/icons";
 import { Health1, Health2, Health3, Health4 } from "../../static/icons";
 
@@ -6,9 +6,6 @@ const Health = ({
   icon = {},
   ...props
 }) => {
-  useEffect(() => {
-    console.log(icon);
-  });
   return (
     <div className="icon">
       { icon?.up == 0 && <img src={Up0} alt="icon"  />}

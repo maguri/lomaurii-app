@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import "./form.css";
-import { Temp2} from "../../static/icons";
+import { Temp1, Temp2, Temp3, Temp4, Temp5 } from "../../static/icons";
 
 const URL = process.env.API_URL || 'http://localhost:3001';
 
@@ -32,16 +32,19 @@ const FormTemp = ({
   return (
     <div className="box">
     <div className="icon" >
-      { level == 1 && <img src={''} alt="icon" id="Temp1" /> }
+      { level == 1 && <img src={Temp1} alt="icon" id="Temp1" /> }
       { level == 2 && <img src={Temp2} alt="icon" id="Temp2" /> }
-      { level == 3 && <img src={''} alt="icon" id="Temp3" /> }
+      { level == 3 && <img src={Temp3} alt="icon" id="Temp3" /> }
+      { level == 4 && <img src={Temp4} alt="icon" id="Temp4" /> }
+      { level == 5 && <img src={Temp5} alt="icon" id="Temp5" /> }
+
     </div>
       Level:
       <input
       style={{margin: 5}}
       type="number"
-      min={2}
-      max={2}
+      min={1}
+      max={5}
       value={level}
       onChange={(evt) => setLevel(evt.target.value)}
       />
