@@ -3,10 +3,10 @@ import React, {useState} from "react";
 import "./form.css";
 import { Water1, Water2, Water3, Water4 } from "../../static/icons";
 
-const URL = process.env.API_URL || 'http://localhost:3001';
 
 const FormWater = ({
   data,
+  url,
   ...props
 }) => {
 
@@ -22,7 +22,7 @@ const FormWater = ({
       body: JSON.stringify({level: level, up: up, down: down})
     };
 
-    fetch(`${URL}/api/status/water`, requestOptions)
+    fetch(`${url}/api/status/water`, requestOptions)
     .then(response => response.json())
     .then(data => {
       console.log(data);

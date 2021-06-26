@@ -3,7 +3,7 @@ import socketIOClient from 'socket.io-client';
 
 const SocketContext = createContext({ socket: null });
 
-const socketUrl = process.env.SOCKET_URL || 'http://localhost:3001';
+const socketUrl = process.env.NODE_ENV == 'developement' ? 'http://localhost:3001' : `${window.location.protocol}${window.location.host}`;
 
 console.log(`Socket: ${socketUrl}`);
 

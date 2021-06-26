@@ -3,10 +3,10 @@ import React, {useState} from "react";
 import "./form.css";
 import { Temp1, Temp2, Temp3, Temp4, Temp5 } from "../../static/icons";
 
-const URL = process.env.API_URL || 'http://localhost:3001';
 
 const FormTemp = ({
   data,
+  url,
   ...props
 }) => {
 
@@ -22,7 +22,7 @@ const FormTemp = ({
       body: JSON.stringify({level: level, up: up, down: down})
     };
 
-    fetch(`${URL}/api/status/temp`, requestOptions)
+    fetch(`${url}/api/status/temp`, requestOptions)
     .then(response => response.json())
     .then(data => {
       console.log(data);

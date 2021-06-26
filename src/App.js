@@ -66,7 +66,8 @@ function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <NavLink to="form" >Form </NavLink>
+        <NavLink to="form" >{process.env.NODE_ENV} Form</NavLink>
+
         <Stamina
           data={data.elements['stamina']}
         />

@@ -3,10 +3,10 @@ import React, {useState} from "react";
 import "./form.css";
 import { Stamina1} from "../../static/icons";
 
-const URL = process.env.API_URL || 'http://localhost:3001';
 
 const FormStamina = ({
   data,
+  url,
   ...props
 }) => {
 
@@ -20,7 +20,7 @@ const FormStamina = ({
       body: JSON.stringify({level: level})
     };
 
-    fetch(`${URL}/api/status/stamina`, requestOptions)
+    fetch(`${url}/api/status/stamina`, requestOptions)
     .then(response => response.json())
     .then(data => {
       console.log(data);
