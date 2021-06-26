@@ -17,7 +17,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Screenshot
 
-![screenshot](https://user-images.githubusercontent.com/14354821/118971890-3a44df80-b970-11eb-8f6a-304269c9024b.png)
+![image](https://user-images.githubusercontent.com/14354821/123518923-86d6b580-d6a8-11eb-99dc-1f5c71b5d707.png)
 
 ### Making a Progressive Web App
 
