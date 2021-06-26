@@ -15,7 +15,8 @@ const FormTemp = ({
   const [down, setDown]   = useState(data?.down);
 
   const sendTemp = () => {
-    console.log()
+    console.log(`POST ${url}/api/status/temp`);
+
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

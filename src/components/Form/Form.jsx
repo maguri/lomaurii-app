@@ -9,7 +9,7 @@ import FormHealth from "./FormHealth";
 import FormTemp from "./FormTemp";
 import FormStamina from "./FormStamina";
 
-const URL = process.env.NODE_ENV == 'developement' ? 'http://localhost:3001' : `${window.location.protocol}${window.location.host}`;
+const URL = process.env.NODE_ENV == 'development' ? 'http://localhost:3001' : `${window.location.protocol}//${window.location.host}`;
 
 const Form = ({
   data = {},
