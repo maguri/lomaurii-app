@@ -11,3 +11,8 @@
 .icon-border {
   border-right: 2px solid var(--white);
 }
+
+.food {
+  width: 46px!important;
+  padding-left: 3px;
+}
