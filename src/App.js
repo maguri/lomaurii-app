@@ -14,7 +14,8 @@ function App() {
     {
       "Other": {
         "key":"Other",
-        "level": 0
+        "level": 0,
+        "pill": false
       },
       "Water": {
         "key":"Water",

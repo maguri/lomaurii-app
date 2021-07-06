@@ -11,13 +11,14 @@ const FormHealth = ({
 }) => {
 
   const [level, setLevel] = useState(data?.level);
+  const [pill, setPill]   = useState(data?.pill);
 
   const sendOther = () => {
     console.log()
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({level: level})
+      body: JSON.stringify({level: level, pill: pill })
     };
 
     fetch(`${url}/api/status/other`, requestOptions)
@@ -41,10 +42,12 @@ const FormHealth = ({
       style={{margin: 5}}
       type="number"
       min={0}
-      max={4}
+      max={3}
       value={level}
       onChange={(evt) => setLevel(evt.target.value)}
       />
+      Pill:
+      <input type="checkbox" id="pill" name="Pill" value={pill} onClick={(evt) => setPill(evt.target.checked)}/>
       <button onClick={sendOther} style={{margin: 'auto', height: 35}}> Save </button>
     </div>
   );

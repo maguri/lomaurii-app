@@ -20,7 +20,11 @@ const containerStyles = {
     width: `${data.level}%`,
     backgroundColor: '#fff',
     borderRadius: 'inherit',
-    textAlign: 'right'
+    textAlign: 'right',
+    transitionProperty: 'width',
+    transitionDuration: '10s',
+    transitionTimingFunction: 'ease',
+    transitionDelay: '0s'
   }
 
   const labelStyles = {

@@ -7,6 +7,7 @@ import Food from "./Food";
 import Blood from "./Blood";
 import Health from "./Health";
 import Temp from "./Temp";
+import Pill from "./Pill";
 
 const Icons = ({
   icons = {},
@@ -19,7 +20,8 @@ const Icons = ({
       <Temp   icon={icons["Temp"]} />
       <Food   icon={icons["Food"]} />
       <Water  icon={icons["Water"]} />
-      <Other  icon={icons["Other"]} />
+      <Other  icon={icons["Other"]}/>
+      <Pill   icon={icons["Other"]}/>
     </div>
   );
 };
