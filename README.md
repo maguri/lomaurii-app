@@ -31,6 +31,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+**Frontend App**
+- yarn build
+- zip folder
+- upload folder: [Releases](https://github.com/maguri/lomaurii-app/releases)
+- Server version: [Server Dockerfile](https://github.com/maguri/lomaurii-server/blob/master/Dockerfile)
+```
+  ENV FRONTEND_VERSION=1.1.0
+```
+**Deploy Server**
+- [README](https://github.com/maguri/lomaurii-server/blob/master/README.md)
+
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
